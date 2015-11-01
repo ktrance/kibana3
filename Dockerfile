@@ -25,7 +25,7 @@ ADD conf/default /etc/nginx/sites-available/default
 
 RUN sed -i 's/root.*$/root \/var\/www\/kibana-'"$KIBANA_VERSION"';/g' /etc/nginx/sites-available/default
 
-VOLUME ["/etc/nginx/sites-enabled", "/etc/nginx/certs", "/etc/nginx/conf.d", "/var/log/nginx", "/var/www/kibana-$KIBANA_VERSION/config.js"]
+VOLUME ["/etc/nginx/sites-enabled", "/etc/nginx/certs", "/etc/nginx/conf.d", "/var/log/nginx"]
 
 CMD ["nginx"]
 
